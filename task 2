@@ -1,0 +1,48 @@
+1. What is the purpose of the ? operator in Dart null safety?
+The ? operator in Dart is used to declare a nullable type , meaning the variable can hold a
+null value.
+Example:
+int? age; // This means age can be an int or null
+2. Create a late variable named address, assign a US value to it and print
+it.
+late means the variable will be initialized later, but must be assigned before it’s used.
+Example:
+void main()
+{
+late String address;
+address = "US";
+print(address);
+}
+3. How do you declare a nullable type in Dart null safety?
+You add a ? after the type.
+Example:
+String? name; // name can be null
+int? age; // age can be null
+4. Write a program in a dart to create an age variable and assign a null
+value using ?
+void main() {
+int? age = null;
+print("Age: $age"); }
+5. Write a function that accepts a nullable int and returns 0 if it's null using
+??
+int checkNull(int? number)
+{
+return number ?? 0;
+}
+void main()
+{
+print(checkNull(null)); // Output: 0
+print(checkNull(5)); // Output: 5
+}
+6. Write generateRandom() function that returns 100 or null, and assign
+result to a non-nullable variable status with default value 0:
+import 'dart:math';
+int? generateRandom()
+{
+Random random = Random();
+return random.nextBool() ? 100 : null;
+}
+void main() {
+int status = generateRandom() ?? 0;
+print("Status: $status");
+}
